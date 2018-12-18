@@ -2,14 +2,38 @@
 version: 2
 
 jobs:
+  coverage_report:
+    <<: *base_config
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - clj-deps-{{ checksum "project.clj" }}
+
+      - run:
+          name: run code coverage
+          command: lein cloverage --codecov
+
+      - store_test_results:
+          path: target/test-results
+
+      - store_artifacts:
+          path: target/coverage
+
+      - run:
+          name: Upload test coverage report to Codecov
+          command: bash <(curl -s https://codecov.io/bash)
+
   build:
     docker:
       - image: quay.io/fundingcircle/clojure:latest
         auth:
           username: $DOCKER_USERNAME
           password: $DOCKER_PASSWORD
+
     environment:
       _JAVA_OPTIONS: "-Xms1024m -Xmx3072m"
+
     steps:
       - checkout
       - &restore-cache
