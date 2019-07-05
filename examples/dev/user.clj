@@ -1,7 +1,6 @@
 (ns user
   "doc-string"
-  (:require [clojure.java.shell :refer [sh]]
-            [jackdaw.client :as jc]
+  (:require [jackdaw.client :as jc]
             [jackdaw.client.log :as jcl]
             [jackdaw.admin :as ja]
             [jackdaw.serdes.edn :as jse]

@@ -1,7 +1,6 @@
 (ns jackdaw.streams-test
   "Tests of the kafka streams wrapper."
   (:require [clojure.spec.test.alpha :as stest]
-            [clojure.string :as string]
             [clojure.test :refer :all]
             [jackdaw.streams :as k]
             [jackdaw.streams.configurable :as cfg]
@@ -1050,4 +1049,3 @@
             (is (= 2 (count keyvals)))
             (is (= [1 1] (first keyvals)))
             (is (= [1 6] (second keyvals)))))))))
-

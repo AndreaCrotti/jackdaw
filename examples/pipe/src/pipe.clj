@@ -5,8 +5,7 @@
   Pipe reads from a Kafka topic called `input`, logs the key and
   value, and writes these to a Kafka topic called `output`."
   (:gen-class)
-  (:require [clojure.string :as str]
-            [clojure.tools.logging :refer [info]]
+  (:require [clojure.tools.logging :refer [info]]
             [jackdaw.streams :as j]
             [jackdaw.serdes.edn :as jse])
   (:import [org.apache.kafka.common.serialization Serdes]))

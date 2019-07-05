@@ -4,7 +4,6 @@
    [clojure.tools.logging :as log]
    [jackdaw.streams :as k]
    [jackdaw.test.journal :refer [with-journal watch-for]]
-   [jackdaw.test.transports.mock :as mock]
    [jackdaw.test :as jd.test]
    [jackdaw.test.transports :as trns]
    [jackdaw.test.serde :as serde]
@@ -141,4 +140,3 @@
             (is (= "test-out" (:topic result)))
             (is (= 1 (:key result)))
             (is (= {:id 1 :payload "foo"} (:value result)))))))))
-

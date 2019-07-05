@@ -3,16 +3,14 @@
             [clj-uuid :as uuid]
             [clojure.data :refer [diff]]
             [clojure.data.json :as json]
-            [clojure.java.io :as io]
-            [clojure.pprint :refer [pprint]]
             [jackdaw.serdes.avro :as avro]
             [jackdaw.serdes.avro.schema-registry :as reg])
-  (:import [java.nio ByteBuffer]
-           [java.util Collection]
-           [org.apache.avro Schema$Parser Schema]
-           [org.apache.avro.generic
-            GenericData$EnumSymbol GenericData$Record GenericData$Array]
-           [org.apache.avro.util Utf8]))
+  (:import (java.nio ByteBuffer)
+           (java.util Collection)
+           (org.apache.avro Schema$Parser Schema)
+           (org.apache.avro.generic
+            GenericData$EnumSymbol GenericData$Record GenericData$Array)
+           (org.apache.avro.util Utf8)))
 
 (defn parse-schema [clj-schema]
   (.parse (Schema$Parser.) ^String (json/write-str clj-schema)))

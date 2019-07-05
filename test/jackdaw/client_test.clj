@@ -5,11 +5,11 @@
             [jackdaw.test.fixtures :as fix]
             [jackdaw.test.serde :as serde]
             [jackdaw.data :as data])
-  (:import [java.util.concurrent LinkedBlockingQueue TimeUnit]
-           java.time.Duration
-           [org.apache.kafka.clients.consumer Consumer ConsumerRecord ConsumerRecords]
-           [org.apache.kafka.clients.producer Producer]
-           org.apache.kafka.common.TopicPartition))
+  (:import (java.util.concurrent LinkedBlockingQueue TimeUnit)
+           (java.time Duration)
+           (org.apache.kafka.clients.consumer Consumer ConsumerRecord ConsumerRecords)
+           (org.apache.kafka.clients.producer Producer)
+           (org.apache.kafka.common TopicPartition)))
 
 (def foo-topic
   (serde/resolver {:topic-name "foo"

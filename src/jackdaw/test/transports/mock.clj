@@ -2,7 +2,6 @@
   (:require
    [clojure.stacktrace :as stacktrace]
    [clojure.tools.logging :as log]
-   [jackdaw.client :as kafka]
    [jackdaw.test.journal :as j]
    [jackdaw.test.transports :as t :refer [deftransport]]
    [jackdaw.test.serde :refer [byte-array-serializer byte-array-deserializer

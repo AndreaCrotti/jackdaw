@@ -5,10 +5,7 @@
   It begins with Pipe which is then extended using an interactive
   workflow. The result is a simple ledger."
   (:gen-class)
-  (:require [clojure.string :as str]
-            [clojure.spec.alpha :as s]
-            [clojure.tools.logging :refer [info]]
-            [clj-uuid :as uuid]
+  (:require [clojure.tools.logging :refer [info]]
             [jackdaw.streams :as j]
             [jackdaw.serdes.edn :as jse])
   (:import [org.apache.kafka.common.serialization Serdes]))

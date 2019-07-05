@@ -1,11 +1,8 @@
 (ns jackdaw.test-test
   (:require
    [clojure.test :refer :all]
-   [clojure.data.json :as json]
-   [jackdaw.serdes.avro.schema-registry :as reg]
    [jackdaw.streams :as k]
    [jackdaw.test :as jd.test]
-   [jackdaw.test.commands :as cmd]
    [jackdaw.test.fixtures :as fix]
    [jackdaw.test.serde :as serde]
    [jackdaw.test.transports :as trns]

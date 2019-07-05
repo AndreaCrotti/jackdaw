@@ -3,8 +3,8 @@
   {:license "BSD 3-Clause License <https://github.com/FundingCircle/jackdaw/blob/master/LICENSE>"}
   (:require [clojure.spec.alpha :as s]
             [jackdaw.streams.lambdas :as lambdas])
-  (:import [org.apache.kafka.streams.kstream
-            Aggregator Initializer Merger]))
+  (:import (org.apache.kafka.streams.kstream
+            Aggregator Initializer Merger)))
 
 (def initializer? (partial instance? Initializer))
 (def aggregator? (partial instance? Aggregator))

@@ -4,8 +4,6 @@
     [clojure.test :refer [deftest is testing] :as test]
     [jackdaw.serdes.avro :as avro]
     [jackdaw.serdes]
-    [jackdaw.serdes.json]
-    [jackdaw.serdes.edn]
     [jackdaw.serdes.resolver :as resolver]
     [jackdaw.serdes.avro.schema-registry :as reg])
   (:import (clojure.lang ExceptionInfo)

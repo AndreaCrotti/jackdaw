@@ -36,9 +36,9 @@
    "BSD 3-Clause License <https://github.com/FundingCircle/jackdaw/blob/master/LICENSE>"}
   (:require [jackdaw.client :as jc]
             [jackdaw.data :as jd])
-  (:import org.apache.kafka.clients.producer.Producer
-           org.apache.kafka.common.serialization.Serde
-           org.apache.kafka.common.utils.Utils))
+  (:import (org.apache.kafka.clients.producer Producer)
+           (org.apache.kafka.common.serialization Serde)
+           (org.apache.kafka.common.utils Utils)))
 
 (defn record-key->key-fn
   "Given a topic config having `:record-key`, parse it,
